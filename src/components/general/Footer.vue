@@ -60,7 +60,6 @@
 
         <a v-if="data.social.youtube"
           :href="data.social.youtube.url"
-          :target="data.social.youtube.target" 
           class="social-link youtube py-2 pl-4 pr-5 rounded-md flex flex-row hover:shadow-lg text-white text-opacity-90 hover:text-opacity-100 transition-color duration-150"
           rel="noopener"
         > 
@@ -143,8 +142,8 @@ export default {
   },
   mounted() {
     document.addEventListener('click', (event) => {
-      event.preventDefault();
       if (event.target === document.querySelector('#submit-contact-form')) {
+        event.preventDefault();
         utils.post.content('send', { 
         name: this.name, 
         mail: this.mail, 

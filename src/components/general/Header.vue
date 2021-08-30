@@ -8,7 +8,7 @@
       <div class="relative w-full flex flex-row justify-between">
         <router-link to="/" class="align-middle">
           <img v-if="logo.image" class="h-10 px-4 mx-0" :src="logo.image" :alt="logo.title">
-          <span v-else class="inline-block nav-height px-4 font-normal text-gray-900">{{ logo.title }}</span>
+          <span v-else class="inline-block nav-height px-4 font-bold text-gray-900">{{ logo.title }}</span>
         </router-link>
         <span @click="toggleMenu()" class="inline-block nav-height px-4 text-gray-900 cursor-pointer sm:hidden material-icons">
           menu

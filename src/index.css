@@ -5,6 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
 
+:root {
+  --nav-height: 3rem;
+}
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -52,8 +56,12 @@ body {
     @apply text-xl font-semibold leading-loose mx-2 mb-4;
   }
 
+  main {
+    min-height: calc(100vh - var(--nav-height));
+  }
+
   .nav-height {
-    line-height: 3rem;
+    line-height: var(--nav-height);
   }
 
   .content-height {
@@ -103,6 +111,17 @@ body {
 
   .wp-block-code {
     @apply mb-4 sm:ml-24 sm:mr-2 lg:ml-96 lg:mr-4 !important;
+  }
+
+  .post-item {
+    max-height: calc(100vh - var(--nav-height) - 64px);
+    height: auto;
+    @apply relative mb-2 sm:mb-8 bg-white transition-all overflow-hidden rounded-sm bg-gradient-to-r from-highlight-700 to-highlight-900 hover:shadow-lg;
+  }
+
+  .post-item__image {
+    max-height: 100vh;
+    @apply relative object-cover w-full;
   }
 
   .page__content > *:not(figure) {
