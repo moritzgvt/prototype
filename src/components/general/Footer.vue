@@ -79,7 +79,7 @@
 
     <div class="max-w-7xl pb-6 content flex flex-col-reverse md:flex-row">
       <form class="flex flex-col w-full mr-2">
-        <h1 class="text-white ml-0 mt-12">Get in touch &swarr;</h1>
+        <h1 class="text-white ml-0 mt-12">Schreib uns &swarr;</h1>
         <input 
           v-model="name" 
           type="text" 
@@ -113,7 +113,7 @@
         />
       </form>
       <div class="flex flex-col md:px-24 md:ml-2">
-        <h1 class="text-white ml-0 mt-12">Find us &searr;</h1>
+        <h1 class="text-white ml-0 mt-12">Hier sind wir &searr;</h1>
         <p v-html="data.rightColumn" class="text-white text-opacity-50 text-center font-light whitespace-nowrap mt-4 md:text-left"/>
       </div>
     </div>
