@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.material-icons.outlined {
+  font-family: 'Material Icons Outlined'
+}
+
+
+body {
+  @apply bg-gray-50;
+}
+
+.menu-open {
+  overflow: hidden;
+}
+
+@layer base {
+  h1 {
+    @apply text-xl font-semibold leading-loose mx-2 mb-4;
+  }
+
+  .nav-height {
+    line-height: 3rem;
+  }
+
+  .content-height {
+    height: calc(100vh - 3rem);
+  }
+
+  .content {
+    @apply sm:px-6 lg:px-8 sm:mx-auto;
+  }
+
+  .router-link-exact-active {
+    @apply relative text-highlight-900;
+  }
+
+
+  /* Social Media */
+  
+  .social-link {
+    margin: .25rem;
+  }
+
+  .social-link:hover {
+    box-shadow: 0px 6px 8px 0px #ffffff;
+  }
+
+  .facebook {
+    @apply bg-gradient-to-r from-blue-600 to-blue-800;
+  }
+
+  .instagram {
+    background: linear-gradient(45deg, #833ab4, #e1306c);
+  }
+
+  .youtube {
+    background: #FF0000;
+  }
+
+  .social-icon {
+    fill: #ffffff;
+  }
+}
+
+@layer components {
+  .page__content {
+    @apply pb-8;
+  }
+
+  .wp-block-code {
+    @apply mb-4 sm:ml-24 sm:mr-2 lg:ml-96 lg:mr-4 !important;
+  }
+
+  .page__content > *:not(figure) {
+    @apply mx-2 sm:ml-24 sm:mr-2 lg:ml-96 lg:mr-4;
+  }
+
+  .page__content p {
+    @apply text-base font-normal leading-relaxed mb-4;
+  }
+
+  .page__content a {
+    @apply underline hover:text-highlight-900;
+  }
+
+  .page__content blockquote {
+    @apply pl-4 border-l-4 border-highlight-200 my-4 italic;
+  }
+
+  .page__content figure {
+    @apply py-12;
+  }
+
+  .page__content figure img {
+    @apply w-full;
+  }
+
+  .page__content figure figcaption {
+    @apply text-sm text-right pt-2 pr-2;
+  }
+
+  .page__content ul {
+    @apply px-2 my-4;
+  }
+
+  .page__content ul li {
+    @apply relative pl-8 leading-8;
+  }
+
+  .page__content ul li:before {
+    content: '\2192';
+    @apply absolute block left-2 text-highlight-200;
+  }
+
+  .contact__input {
+    @apply bg-transparent text-white py-2 pr-2 text-lg transition-colors duration-150 tracking-wider border-highlight-50 outline-none font-light;
+  }
+
+  .contact__input::placeholder {
+    @apply text-white text-opacity-25 font-light tracking-wider;
+  }
+
+  .contact__input:focus {
+    @apply border-highlight-400;
+  }
+
+  .contact__submit {
+    @apply bg-white bg-opacity-90 text-highlight-900 transition-opacity cursor-pointer p-2 hover:bg-opacity-80 rounded-sm;
+  }
+}
