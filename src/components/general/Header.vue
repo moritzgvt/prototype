@@ -16,7 +16,7 @@
       </div>
 
       <!-- Navigation -->
-      <nav class="flex flex-row top-0 sm:relative">
+      <nav class="flex flex-row fixed top-12 sm:top-0 sm:relative">
         <div 
           @click="closeMenu()"
           class="fixed w-full h-screen bg-highlight-900 bg-opacity-80 transition-all duration-200 sm:hidden"
